@@ -18,7 +18,6 @@ public class ScoreScript : MonoBehaviour
 
     private void Awake()
     {
-        Advertisement.Initialize("5483914");
         score = 0;  
         gameOverPanel.SetActive(false); 
         if(PlayerPrefs.GetInt("HighScore") == null)
@@ -45,11 +44,6 @@ public class ScoreScript : MonoBehaviour
         }
         else
         {
-            int chance = Random.Range(0, 100);
-            if(chance >= 0)
-            {
-                Advertisement.Show();
-            }
             highScoreTextMenu.text = "High: " + PlayerPrefs.GetInt("HighScore").ToString();
             gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
