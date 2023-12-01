@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class ScreenBombEffects : MonoBehaviour
@@ -54,7 +53,7 @@ public class ScreenBombEffects : MonoBehaviour
             {
                 UI.SetActive(true);
                 colorIndex = 0;
-                colorChangeRate = 0.035f;
+                colorChangeRate = 0.05f;
                 Camera.main.backgroundColor = Color.Lerp(currentColor, screenColorChange[colorIndex], colorChangeRate);
                 FruitsBehaviors.DestroyAllFruitsAndBombs();
             }

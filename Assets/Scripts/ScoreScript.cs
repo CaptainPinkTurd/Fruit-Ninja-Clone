@@ -50,19 +50,6 @@ public class ScoreScript : MonoBehaviour
             highScoreTextMenu.text = "High: " + PlayerPrefs.GetInt("HighScore").ToString();
             Time.timeScale = 0f;
             gameOverPanel.SetActive(true);
-            //if(elapsedTime < UIActivationTime)
-            //{
-            //    elapsedTime += Time.unscaledDeltaTime;
-            //    if(elapsedTime >= 0.8f)
-            //    {
-            //        UI.SetActive(false);
-            //    }
-            //}
-            //else
-            //{
-            //    gameOverPanel.SetActive(true);
-            //    UI.SetActive(true);
-            //}
         }
     }
     internal static void AddScore()
