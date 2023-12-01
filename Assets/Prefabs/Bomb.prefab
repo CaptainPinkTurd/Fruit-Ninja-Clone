@@ -137,3 +137,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicedFruit: {fileID: 8960534701486073006}
+  bombEffects: {fileID: 4145549018270188652, guid: fdad434d03da6964fa2d818fde6ae62e, type: 3}

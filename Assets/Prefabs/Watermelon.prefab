@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3491585104347421277}
   m_Layer: 0
   m_Name: Watermelon
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,3 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicedFruit: {fileID: 2634494322673602934, guid: da1707aace65af14ba74b25744ede0fd, type: 3}
+  bombEffects: {fileID: 4145549018270188652, guid: fdad434d03da6964fa2d818fde6ae62e, type: 3}

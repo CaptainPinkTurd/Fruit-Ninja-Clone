@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class FruitsBehaviors : MonoBehaviour
 {
     [SerializeField] GameObject slicedFruit;
+    [SerializeField] GameObject bombEffects;
     internal static bool gameOver = false;
     private void CreatesSlicedFruit()
     {
@@ -25,12 +26,28 @@ public class FruitsBehaviors : MonoBehaviour
     {
         if (collision.CompareTag("Blade") && gameObject.CompareTag("Bomb"))
         {
+            GameObject vfx = Instantiate(bombEffects, gameObject.transform.position, Quaternion.Euler(new Vector3(90f, 0f, 0f)));
+            ScreenBombEffects.shake = true;
             gameOver = true;
         }
-        if (collision.CompareTag("Blade"))
+        else if (collision.CompareTag("Blade"))
         {
             CreatesSlicedFruit();
             ScoreScript.AddScore();
         }      
+    }
+
+    internal static void DestroyAllFruitsAndBombs()
+    {
+        GameObject[] fruits = GameObject.FindGameObjectsWithTag("Fruit");
+        GameObject[] bombs = GameObject.FindGameObjectsWithTag("Bomb");
+        foreach(var target in fruits)
+        {
+            Destroy(target);
+        }
+        foreach (var target in bombs)
+        {
+            Destroy(target);
+        }
     }
 }

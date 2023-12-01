@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3642248320729698725}
   m_Layer: 0
   m_Name: Banana
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slicedFruit: {fileID: 898493881409437800, guid: 19489fe3b8dc0df44845fd811f715609, type: 3}
+  bombEffects: {fileID: 4145549018270188652, guid: fdad434d03da6964fa2d818fde6ae62e, type: 3}
 --- !u!50 &2142025123240695511
 Rigidbody2D:
   serializedVersion: 4

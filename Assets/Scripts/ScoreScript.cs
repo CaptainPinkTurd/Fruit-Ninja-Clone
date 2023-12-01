@@ -15,6 +15,9 @@ public class ScoreScript : MonoBehaviour
 
     [Header("GameOver Element")]
     [SerializeField] GameObject gameOverPanel;
+    //[SerializeField] GameObject UI;
+    float elapsedTime = 0f;
+    float UIActivationTime = 1.75f;
 
     private void Awake()
     {
@@ -45,8 +48,21 @@ public class ScoreScript : MonoBehaviour
         else
         {
             highScoreTextMenu.text = "High: " + PlayerPrefs.GetInt("HighScore").ToString();
-            gameOverPanel.SetActive(true);
             Time.timeScale = 0f;
+            gameOverPanel.SetActive(true);
+            //if(elapsedTime < UIActivationTime)
+            //{
+            //    elapsedTime += Time.unscaledDeltaTime;
+            //    if(elapsedTime >= 0.8f)
+            //    {
+            //        UI.SetActive(false);
+            //    }
+            //}
+            //else
+            //{
+            //    gameOverPanel.SetActive(true);
+            //    UI.SetActive(true);
+            //}
         }
     }
     internal static void AddScore()
