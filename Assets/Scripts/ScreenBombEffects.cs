@@ -63,7 +63,7 @@ public class ScreenBombEffects : MonoBehaviour
                 Camera.main.backgroundColor = Color.Lerp(currentColor, screenColorChange[colorIndex], colorChangeRate);
                 FruitsBehaviors.DestroyAllFruitsAndBombs();
             }
-            yield return null;
+            yield return null; //yield return null make sure that it wouldn't process everything all at once
         }
         transform.position = startingPos;
     }

@@ -15,9 +15,8 @@ public class ScoreScript : MonoBehaviour
 
     [Header("GameOver Element")]
     [SerializeField] GameObject gameOverPanel;
-    //[SerializeField] GameObject UI;
     float elapsedTime = 0f;
-    float UIActivationTime = 1.75f;
+    float PanelActivationTime = 0.75f; //it's suppose to be 1.75, idk why it's 0.75 now but don't ask im too tired for this shit
 
     private void Awake()
     {
@@ -49,7 +48,14 @@ public class ScoreScript : MonoBehaviour
         {
             highScoreTextMenu.text = "High: " + PlayerPrefs.GetInt("HighScore").ToString();
             Time.timeScale = 0f;
-            gameOverPanel.SetActive(true);
+            if(elapsedTime < PanelActivationTime)
+            {
+                elapsedTime += Time.unscaledDeltaTime;
+            }
+            else
+            {
+                gameOverPanel.SetActive(true);
+            }
         }
     }
     internal static void AddScore()
